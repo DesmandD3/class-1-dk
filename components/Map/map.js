@@ -14,20 +14,57 @@ import {
 
 export default function Map() {
 
-    const position = [49.28594, -123.11129]
+    const posWater = [49.28594, -123.11129];
+    const posBurrard = [49.28566904926404, -123.11997222272772];
+    const posGranville = [49.28335955912636, -123.11616348595913];
+    const posStadium = [49.27977613603898, -123.10976909962109];
+    const posMain = [49.27330851820787, -123.10032772386313];
+    const posCommercial = [49.26276532344843, -123.06895660727297];
+    const posNanaimo = [49.248396069081295, -123.05595325799037];
+    const pos29thAve = [49.24440386713434, -123.04558920230572];
+    const posJoyce = [49.23850602387262, -123.03101944297005];
+    const posPatterson = [49.229903155951234, -123.01249074308997];
+    const posMetro = [49.225909458945516, -123.00336050363676];
+    const posRoyalOak = [49.22019861209494, -122.98776077588772];
+    const posEdmonds = [49.21240059362749, -122.9590062591951];
+    const pos22ndSt = [49.19998083159568, -122.948808610817];
+    const posNewWest = [49.20178337669102, -122.91048738010707];
+    const posColumbia = [49.205204977889025, -122.90532872635256];
+    const posScott = [49.20472835112317, -122.87239671377016];
+    const posGateway = [49.19924681299981, -122.84881801788136];
+    const posSurrey = [49.18984847673752, -122.84649922901706];
+    const posKingG = [49.183122121977355, -122.84347698743535];
+
     const purpleOption = { color: 'purple' };
     const redOption = { color: 'red' };
     const polyline = [
-        [49.28594, -123.11129],
-        [49.28250, -123.11865],
-        [49.27450, -123.12189],
+        posWater,
+        posBurrard,
+        posGranville,
+        posStadium,
+        posMain,
+        posCommercial,
+        posNanaimo,
+        pos29thAve,
+        posJoyce,
+        posPatterson,
+        posMetro,
+        posRoyalOak,
+        posEdmonds,
+        pos22ndSt,
+        posNewWest,
+        posColumbia,
+        posScott,
+        posGateway,
+        posSurrey,
+        posKingG,
     ];
 
     return (
         <MapContainer
             className={style.map}
-            center={position}
-            zoom={15}
+            center={posMetro}
+            zoom={12}
             scrollWheelZoom={true}
         >
             <TileLayer
@@ -35,9 +72,123 @@ export default function Map() {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
 
-            <Marker position={position}>
+            <Marker position={posWater}>
                 <Popup>
                     Waterfront <br /> Station
+                </Popup>
+            </Marker>
+
+            <Marker position={posBurrard}>
+                <Popup>
+                    Burrard <br /> Station
+                </Popup>
+            </Marker>
+
+            <Marker position={posGranville}>
+                <Popup>
+                    Granville <br /> Station
+                </Popup>
+            </Marker>
+
+            <Marker position={posStadium}>
+                <Popup>
+                    Stadium - Chinatown <br /> Station
+                </Popup>
+            </Marker>
+
+            <Marker position={posMain}>
+                <Popup>
+                    Main St - Science World <br /> Station
+                </Popup>
+            </Marker>
+
+            <Marker position={posCommercial}>
+                <Popup>
+                    Commercial-Broadway <br /> Station
+                </Popup>
+            </Marker>
+
+            <Marker position={posNanaimo}>
+                <Popup>
+                    Nanaimo <br /> Station
+                </Popup>
+            </Marker>
+
+            <Marker position={pos29thAve}>
+                <Popup>
+                    29th Avenue <br /> Station
+                </Popup>
+            </Marker>
+
+            <Marker position={posJoyce}>
+                <Popup>
+                    Joyce - Collingwood <br /> Station
+                </Popup>
+            </Marker>
+
+            <Marker position={posPatterson}>
+                <Popup>
+                    Patterson <br /> Station
+                </Popup>
+            </Marker>
+
+            <Marker position={posMetro}>
+                <Popup>
+                    Metrotown <br /> Station
+                </Popup>
+            </Marker>
+
+            <Marker position={posRoyalOak}>
+                <Popup>
+                    Royal Oak <br /> Station
+                </Popup>
+            </Marker>
+
+            <Marker position={posEdmonds}>
+                <Popup>
+                    Edmonds <br /> Station
+                </Popup>
+            </Marker>
+
+            <Marker position={pos22ndSt}>
+                <Popup>
+                    22nd Street <br /> Station
+                </Popup>
+            </Marker>
+
+            <Marker position={posNewWest}>
+                <Popup>
+                    New Westminster <br /> Station
+                </Popup>
+            </Marker>
+
+            <Marker position={posColumbia}>
+                <Popup>
+                    Columbia <br /> Station
+                </Popup>
+            </Marker>
+
+            <Marker position={posScott}>
+                <Popup>
+                    Scott Road <br /> Station
+                </Popup>
+            </Marker>
+
+            <Marker position={posGateway}>
+                <Popup>
+                    Gateway <br /> Station
+                </Popup>
+            </Marker>
+
+            <Marker position={posSurrey}>
+                <Popup>
+                    Surrey Central <br /> Station
+                </Popup>
+            </Marker>
+
+            <Marker position={posKingG}>
+                <Popup>
+                    King George <br /> Station
                 </Popup>
             </Marker>
 
