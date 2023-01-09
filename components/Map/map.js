@@ -1,8 +1,20 @@
 import 'leaflet/dist/leaflet.css'
 import 'leaflet-defaulticon-compatibility'
+
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
+
 import style from "../../styles/Home.module.css"
+
 import { Icon } from "leaflet";
+import headerPic from '../../public/transLinkLogo.png';
+
+import React from 'react'
+import {
+    Header,
+    Grid,
+    Divider,
+    Segment
+} from 'semantic-ui-react'
 
 import {
     MapContainer,
@@ -14,10 +26,11 @@ import {
 } from 'react-leaflet'
 
 export default function Map() {
+
     const trainIcon = new Icon({
         iconUrl: "trainIcon2.svg",
         iconSize: [40, 40]
-      });
+    });
 
     const posWater = [49.28594, -123.11129];
     const posBurrard = [49.28566904926404, -123.11997222272772];
@@ -78,162 +91,170 @@ export default function Map() {
     ];
 
     return (
-        <MapContainer
-            className={style.map}
-            center={posMetro}
-            zoom={12}
-            scrollWheelZoom={true}
-        >
-            <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
+        <>
 
-            <Marker icon={trainIcon} position={posWater}>
-                <Popup>
-                    Waterfront <br /> Station
-                </Popup>
-            </Marker>
+            <Header as='h1'
+                image='transLinkLogo.png'
+                content='Expo Line'>
+            </Header>
 
-            <Marker icon={trainIcon} position={posBurrard}>
-                <Popup>
-                    Burrard <br /> Station
-                </Popup>
-            </Marker>
 
-            <Marker icon={trainIcon} position={posGranville}>
-                <Popup>
-                    Granville <br /> Station
-                </Popup>
-            </Marker>
+            <MapContainer
+                className={style.map}
+                center={posMetro}
+                zoom={12}
+                scrollWheelZoom={true}
+            >
+                <TileLayer
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
 
-            <Marker icon={trainIcon} position={posStadium}>
-                <Popup>
-                    Stadium - Chinatown <br /> Station
-                </Popup>
-            </Marker>
+                <Marker icon={trainIcon} position={posWater}>
+                    <Popup>
+                        Waterfront <br /> Station
+                    </Popup>
+                </Marker>
 
-            <Marker icon={trainIcon} position={posMain}>
-                <Popup>
-                    Main St - Science World <br /> Station
-                </Popup>
-            </Marker>
+                <Marker icon={trainIcon} position={posBurrard}>
+                    <Popup>
+                        Burrard <br /> Station
+                    </Popup>
+                </Marker>
 
-            <Marker icon={trainIcon} position={posCommercial}>
-                <Popup>
-                    Commercial-Broadway <br /> Station
-                </Popup>
-            </Marker>
+                <Marker icon={trainIcon} position={posGranville}>
+                    <Popup>
+                        Granville <br /> Station
+                    </Popup>
+                </Marker>
 
-            <Marker icon={trainIcon} position={posNanaimo}>
-                <Popup>
-                    Nanaimo <br /> Station
-                </Popup>
-            </Marker>
+                <Marker icon={trainIcon} position={posStadium}>
+                    <Popup>
+                        Stadium - Chinatown <br /> Station
+                    </Popup>
+                </Marker>
 
-            <Marker icon={trainIcon} position={pos29thAve}>
-                <Popup>
-                    29th Avenue <br /> Station
-                </Popup>
-            </Marker>
+                <Marker icon={trainIcon} position={posMain}>
+                    <Popup>
+                        Main St - Science World <br /> Station
+                    </Popup>
+                </Marker>
 
-            <Marker icon={trainIcon} position={posJoyce}>
-                <Popup>
-                    Joyce - Collingwood <br /> Station
-                </Popup>
-            </Marker>
+                <Marker icon={trainIcon} position={posCommercial}>
+                    <Popup>
+                        Commercial-Broadway <br /> Station
+                    </Popup>
+                </Marker>
 
-            <Marker icon={trainIcon} position={posPatterson}>
-                <Popup>
-                    Patterson <br /> Station
-                </Popup>
-            </Marker>
+                <Marker icon={trainIcon} position={posNanaimo}>
+                    <Popup>
+                        Nanaimo <br /> Station
+                    </Popup>
+                </Marker>
 
-            <Marker icon={trainIcon} position={posMetro}>
-                <Popup>
-                    Metrotown <br /> Station
-                </Popup>
-            </Marker>
+                <Marker icon={trainIcon} position={pos29thAve}>
+                    <Popup>
+                        29th Avenue <br /> Station
+                    </Popup>
+                </Marker>
 
-            <Marker icon={trainIcon} position={posRoyalOak}>
-                <Popup>
-                    Royal Oak <br /> Station
-                </Popup>
-            </Marker>
+                <Marker icon={trainIcon} position={posJoyce}>
+                    <Popup>
+                        Joyce - Collingwood <br /> Station
+                    </Popup>
+                </Marker>
 
-            <Marker icon={trainIcon} position={posEdmonds}>
-                <Popup>
-                    Edmonds <br /> Station
-                </Popup>
-            </Marker>
+                <Marker icon={trainIcon} position={posPatterson}>
+                    <Popup>
+                        Patterson <br /> Station
+                    </Popup>
+                </Marker>
 
-            <Marker icon={trainIcon} position={pos22ndSt}>
-                <Popup>
-                    22nd Street <br /> Station
-                </Popup>
-            </Marker>
+                <Marker icon={trainIcon} position={posMetro}>
+                    <Popup>
+                        Metrotown <br /> Station
+                    </Popup>
+                </Marker>
 
-            <Marker icon={trainIcon} position={posNewWest}>
-                <Popup>
-                    New Westminster <br /> Station
-                </Popup>
-            </Marker>
+                <Marker icon={trainIcon} position={posRoyalOak}>
+                    <Popup>
+                        Royal Oak <br /> Station
+                    </Popup>
+                </Marker>
 
-            <Marker icon={trainIcon} position={posColumbia}>
-                <Popup>
-                    Columbia <br /> Station
-                </Popup>
-            </Marker>
+                <Marker icon={trainIcon} position={posEdmonds}>
+                    <Popup>
+                        Edmonds <br /> Station
+                    </Popup>
+                </Marker>
 
-            <Marker icon={trainIcon} position={posScott}>
-                <Popup>
-                    Scott Road <br /> Station
-                </Popup>
-            </Marker>
+                <Marker icon={trainIcon} position={pos22ndSt}>
+                    <Popup>
+                        22nd Street <br /> Station
+                    </Popup>
+                </Marker>
 
-            <Marker icon={trainIcon} position={posGateway}>
-                <Popup>
-                    Gateway <br /> Station
-                </Popup>
-            </Marker>
+                <Marker icon={trainIcon} position={posNewWest}>
+                    <Popup>
+                        New Westminster <br /> Station
+                    </Popup>
+                </Marker>
 
-            <Marker icon={trainIcon} position={posSurrey}>
-                <Popup>
-                    Surrey Central <br /> Station
-                </Popup>
-            </Marker>
+                <Marker icon={trainIcon} position={posColumbia}>
+                    <Popup>
+                        Columbia <br /> Station
+                    </Popup>
+                </Marker>
 
-            <Marker icon={trainIcon} position={posKingG}>
-                <Popup>
-                    King George <br /> Station
-                </Popup>
-            </Marker>
+                <Marker icon={trainIcon} position={posScott}>
+                    <Popup>
+                        Scott Road <br /> Station
+                    </Popup>
+                </Marker>
 
-            <Marker icon={trainIcon} position={posSapper}>
-                <Popup>
-                    Sapperton <br /> Station
-                </Popup>
-            </Marker>
+                <Marker icon={trainIcon} position={posGateway}>
+                    <Popup>
+                        Gateway <br /> Station
+                    </Popup>
+                </Marker>
 
-            <Marker icon={trainIcon} position={posBraid}>
-                <Popup>
-                    Braid <br /> Station
-                </Popup>
-            </Marker>
+                <Marker icon={trainIcon} position={posSurrey}>
+                    <Popup>
+                        Surrey Central <br /> Station
+                    </Popup>
+                </Marker>
 
-            <Marker icon={trainIcon} position={posLougheed}>
-                <Popup>
-                    Lougheed Town Centre <br /> Station
-                </Popup>
-            </Marker>
+                <Marker icon={trainIcon} position={posKingG}>
+                    <Popup>
+                        King George <br /> Station
+                    </Popup>
+                </Marker>
 
-            <Marker icon={trainIcon} position={posProduction}>
-                <Popup>
-                    Production Way - University <br /> Station
-                </Popup>
-            </Marker>
+                <Marker icon={trainIcon} position={posSapper}>
+                    <Popup>
+                        Sapperton <br /> Station
+                    </Popup>
+                </Marker>
 
-            {/* <CircleMarker
+                <Marker icon={trainIcon} position={posBraid}>
+                    <Popup>
+                        Braid <br /> Station
+                    </Popup>
+                </Marker>
+
+                <Marker icon={trainIcon} position={posLougheed}>
+                    <Popup>
+                        Lougheed Town Centre <br /> Station
+                    </Popup>
+                </Marker>
+
+                <Marker icon={trainIcon} position={posProduction}>
+                    <Popup>
+                        Production Way - University <br /> Station
+                    </Popup>
+                </Marker>
+
+                {/* <CircleMarker
                 center={[49.27450, -123.12189]}
                 pathOptions={redOption}
                 radius={20}
@@ -241,8 +262,38 @@ export default function Map() {
                 <Popup>finish <br />Station</Popup>
             </CircleMarker> */}
 
-            <Polyline pathOptions={blueOption} positions={mainLine} />
-            <Polyline pathOptions={blueOption} positions={extLine} />
-        </MapContainer>
+                <Polyline pathOptions={blueOption} positions={mainLine} />
+                <Polyline pathOptions={blueOption} positions={extLine} />
+            </MapContainer>
+
+            <Segment>
+                <Grid columns={2} relaxed='very'>
+                    <Grid.Column>
+                        <p>
+                            one
+                        </p>
+                        <p>
+                            one
+                        </p>
+                        <p>
+                            one
+                        </p>
+                    </Grid.Column>
+                    <Grid.Column>
+                        <p>
+                            one
+                        </p>
+                        <p>
+                            one
+                        </p>
+                        <p>
+                            one
+                        </p>
+                    </Grid.Column>
+                </Grid>
+
+                <Divider vertical></Divider>
+            </Segment>
+        </>
     )
 }
