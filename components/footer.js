@@ -1,9 +1,5 @@
 import React from 'react'
-import {
-    Grid,
-    Divider,
-    Segment
-} from 'semantic-ui-react'
+import { Grid, Divider, Segment } from 'semantic-ui-react'
 
 export default function CustFooter() {
 
@@ -35,8 +31,6 @@ export default function CustFooter() {
                     </p>
                 </Grid.Column>
             </Grid>
-
-            <Divider vertical='true'></Divider>
 
         </Segment>
     )
