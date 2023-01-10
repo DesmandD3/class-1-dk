@@ -2,6 +2,8 @@ import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import Map from '../components/map'
+import CustHeader from '../components/header'
+import CustFooter from '../components/footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +17,9 @@ export default function Home() {
         <link rel="icon" href="/trainIcon2.svg" />
       </Head>
       <main className={styles.main}>
+        <CustHeader/>
         <Map/>
+        <CustFooter />
       </main>
     </>
   )

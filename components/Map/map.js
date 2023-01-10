@@ -11,9 +11,6 @@ import headerPic from '../../public/transLinkLogo.png';
 import React from 'react'
 import {
     Header,
-    Grid,
-    Divider,
-    Segment,
     Container
 } from 'semantic-ui-react'
 
@@ -93,12 +90,6 @@ export default function Map() {
 
     return (
         <>
-
-            <Header as='h1'
-                image='transLinkLogo.png'
-                content='Expo Line'>
-            </Header>
-
             <Container text>
                 <Header as='h3'>Expo Line</Header>
                 <p>
@@ -326,36 +317,6 @@ export default function Map() {
                 </p>
             </Container>
 
-            <Segment position='relative'>
-                <Grid columns={2} relaxed='very'>
-                    <Grid.Column>
-                        <p>
-                            one
-                        </p>
-                        <p>
-                            one
-                        </p>
-                        <p>
-                            one
-                        </p>
-                    </Grid.Column>
-
-                    <Grid.Column>
-                        <p>
-                            one
-                        </p>
-                        <p>
-                            one
-                        </p>
-                        <p>
-                            one
-                        </p>
-                    </Grid.Column>
-                </Grid>
-
-                <Divider vertical='true'></Divider>
-
-            </Segment>
         </>
     )
 }
