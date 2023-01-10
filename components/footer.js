@@ -1,38 +1,23 @@
 import React from 'react'
-import { Grid, Divider, Segment } from 'semantic-ui-react'
+import { Image, Menu } from 'semantic-ui-react'
 
 export default function CustFooter() {
 
     return (
-
-        <Segment position='relative'>
-            <Grid columns={2} relaxed='very'>
-                <Grid.Column>
-                    <p>
-                        one
-                    </p>
-                    <p>
-                        one
-                    </p>
-                    <p>
-                        one
-                    </p>
-                </Grid.Column>
-
-                <Grid.Column>
-                    <p>
-                        one
-                    </p>
-                    <p>
-                        one
-                    </p>
-                    <p>
-                        one
-                    </p>
-                </Grid.Column>
-            </Grid>
-
-        </Segment>
+        <div>
+            <Image src='transLinkLogo.png' size='mini' />
+            <Menu>
+                <Menu.Item>
+                    Getting Around
+                </Menu.Item>
+                <Menu.Item>
+                    Resources
+                </Menu.Item>
+                <Menu.Item>
+                    Contact Us
+                </Menu.Item>
+            </Menu>
+        </div>
     )
 
 }
