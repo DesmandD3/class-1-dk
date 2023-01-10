@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import Map from '../components/map'
 import CustHeader from '../components/header'
 import CustFooter from '../components/footer'
+import TextContainer from '../components/textCont'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,8 +18,9 @@ export default function Home() {
         <link rel="icon" href="/trainIcon2.svg" />
       </Head>
       <main className={styles.main}>
-        <CustHeader/>
-        <Map/>
+        <CustHeader />
+        <Map />
+        <TextContainer />
         <CustFooter />
       </main>
     </>

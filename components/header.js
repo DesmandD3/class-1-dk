@@ -1,11 +1,5 @@
 import React from 'react'
-import {
-    Header,
-    Grid,
-    Divider,
-    Segment,
-    Container
-} from 'semantic-ui-react'
+import { Header } from 'semantic-ui-react'
 
 import style from "../styles/Home.module.css"
 

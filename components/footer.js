@@ -9,7 +9,7 @@ export default function CustFooter() {
 
     return (
 
-            <Segment position='relative'>
+        <Segment position='relative'>
             <Grid columns={2} relaxed='very'>
                 <Grid.Column>
                     <p>
@@ -39,6 +39,6 @@ export default function CustFooter() {
             <Divider vertical='true'></Divider>
 
         </Segment>
-        )
+    )
 
 }
