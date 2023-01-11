@@ -5,7 +5,11 @@ export default function CustFooter() {
 
     return (
         <div>
-            <Image src='transLinkLogo.png' size='mini' />
+            <Image src='transLinkLogo.png'
+                style={{
+                    width: 200,
+                    height: 100
+                }} />
             <Menu>
                 <Menu.Item>
                     Getting Around
