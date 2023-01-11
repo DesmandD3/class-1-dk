@@ -3,7 +3,14 @@ import { Header, Container } from 'semantic-ui-react'
 
 export default function TextContainer() {
     return (
-        <Container text>
+        <Container text style={{
+            marginTop: '1em',
+            margin: 20,
+            padding: 20,
+            borderWidth: 5,
+            borderStyle: 'solid',
+            borderColor: '#1C6EA4'
+        }}>
             <Header as='h3'>History</Header>
             < br />
             <p>

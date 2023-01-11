@@ -25,7 +25,7 @@ export default function Home() {
       </Head>
       <main className={styles.custFont}>
         <CustHeader />
-        {/* <TextContainer2 /> */}
+        <TextContainer2 />
         <Map />
         <TextContainer />
         <CustFooter />
