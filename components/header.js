@@ -7,9 +7,15 @@ export default function CustHeader() {
 
     return (
 
-        <Header className={style.img} as='h1'
-            content='Expo Line'>
-            <Image src='transLinkLogo.png' style={{width: 200, height: 100}}/>
+        <Header className={style.img} as='h1' content='Expo Line Station Map'>
+            <Image
+                src='transLinkLogo.png'
+                style={{
+                    width: 200,
+                    height: 100,
+                    marginTop: 25,
+                    marginLeft: 25,
+                }} />
         </Header>
     )
 }
